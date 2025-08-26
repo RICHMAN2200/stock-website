@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock App - Login</title>
+  <!-- ✅ Add Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
+  <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md text-center">
+    <img src="assets/logo.png" alt="Company Logo" class="mx-auto w-20 mb-4">
+    <h2 class="text-2xl font-bold mb-6">Stock Take System</h2>
+
+    <form onsubmit="return handleLogin(event)" class="space-y-4">
+      <!-- Role -->
+      <div class="text-left">
+        <label for="role" class="block text-sm font-medium mb-1">Login As</label>
+        <select id="role" required
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+          <option value="">-- Select Role --</option>
+          <option value="admin">Admin</option>
+          <option value="merchandiser">Merchandiser</option>
+        </select>
+      </div>
+
+      <!-- Username -->
+      <div class="text-left">
+        <label for="username" class="block text-sm font-medium mb-1">Username</label>
+        <input type="text" id="username" required placeholder="Enter username"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Password -->
+      <div class="text-left">
+        <label for="password" class="block text-sm font-medium mb-1">Password</label>
+        <input type="password" id="password" required placeholder="Enter password"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Button -->
+      <button type="submit"
+        class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700">
+        Login
+      </button>
+    </form>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+
+      const role = document.getElementById("role").value;
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!username || !password) {
+        alert("Please enter valid credentials.");
+        return false;
+      }
+
+      if (role === "admin") {
+        window.location.href = "admin/dashboard_admin.html";
+      } else if (role === "merchandiser") {
+        window.location.href = "merch/dashboard_merch.html";
+      } else {
+        alert("Please select a role.");
+      }
+
+      return false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!-- merch_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merchandiser Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <div class="min-h-screen flex flex-col">
+    
+    <!-- Navbar -->
+    <header class="bg-green-600 text-white shadow-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Merchandiser Dashboard</h1>
+        <button onclick="logout()" class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600 transition">
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <!-- Welcome Banner -->
+    <section class="bg-white shadow-md rounded-xl max-w-5xl mx-auto mt-6 p-6 text-center">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Welcome, Merchandiser 👋</h2>
+      <p class="text-gray-600">
+        This dashboard helps you record stock movements, track reports, and manage your assigned branches efficiently. 
+        Use the quick actions below to get started.
+      </p>
+    </section>
+
+    <!-- Content -->
+    <main class="flex-1 p-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+      
+      <!-- Card 1 -->
+      <a href="manage-stocks-merch.html" class="block bg-white shadow-lg rounded-2xl p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition transform">
+        <img src="/assets/download (5).jpg" alt="Manage Stocks" class="mx-auto mb-4 rounded-lg h-40 object-cover">
+        <h2 class="text-xl font-semibold mb-2 text-gray-800">Manage Stocks</h2>
+        <p class="text-gray-600 text-sm">
+          Quickly record stock updates for branches and products you manage.
+        </p>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="view-reports-merch.html" class="block bg-white shadow-lg rounded-2xl p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition transform">
+        <img src="/assets/download (4).jpg" alt="View Reports" class="mx-auto mb-4 rounded-lg h-40 object-cover">
+        <h2 class="text-xl font-semibold mb-2 text-gray-800">View Reports</h2>
+        <p class="text-gray-600 text-sm">
+          Track your submitted stock entries, monitor daily activity, and export them as CSV.
+        </p>
+      </a>
+    </main>
+
+    <!-- Quick Tips / Info -->
+    <section class="bg-white shadow-md rounded-xl max-w-5xl mx-auto mt-6 p-6">
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">📌 Quick Tips</h3>
+      <ul class="text-gray-600 space-y-2 list-disc list-inside">
+        <li>Always double-check stock entries before submitting.</li>
+        <li>Download reports regularly to keep offline records.</li>
+        <li>Reach out to Admin if you face issues with your assigned products.</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+      <div class="container mx-auto px-6 text-center">
+        <p class="font-bold">Vivek Investments Ltd</p>
+        <p class="text-sm">Stock Management & Merchandising Solutions</p>
+        <p class="text-sm mt-2">Contact: info@vivekinvestments.com | +254 700 000 000</p>
+        <p class="text-xs mt-2">&copy; 2025 Vivek Investments Ltd. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function logout() {
+      window.location.href = "index.html"; // back to login
+    }
+  </script>
+</body>
+</html>

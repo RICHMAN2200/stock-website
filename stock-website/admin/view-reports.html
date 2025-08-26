@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Reports - Stock Take App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white p-6 shadow-md">
+    <h1 class="text-3xl font-bold">View Reports</h1>
+    <p class="mt-2 text-sm text-blue-100">Monitor stock activities, track performance, and export reports with ease.</p>
+  </header>
+
+  <!-- Summary Stats -->
+  <section class="flex flex-col md:flex-row justify-between max-w-7xl mx-auto p-6 mt-6 gap-6">
+    
+    <!-- Total Users -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 flex-1 text-center hover:shadow-2xl transition transform hover:-translate-y-1">
+      <h3 class="text-lg font-semibold text-gray-700 mb-2">Total Users</h3>
+      <p class="text-4xl font-bold text-blue-600">25</p>
+      <p class="text-gray-500 mt-1">Admins & Merchandisers</p>
+    </div>
+
+    <!-- Total Branches -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 flex-1 text-center hover:shadow-2xl transition transform hover:-translate-y-1">
+      <h3 class="text-lg font-semibold text-gray-700 mb-2">Total Branches</h3>
+      <p class="text-4xl font-bold text-green-600">50</p>
+      <p class="text-gray-500 mt-1">Active Retail Locations</p>
+    </div>
+
+    <!-- Total Stock Entries -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 flex-1 text-center hover:shadow-2xl transition transform hover:-translate-y-1">
+      <h3 class="text-lg font-semibold text-gray-700 mb-2">Stock Entries</h3>
+      <p class="text-4xl font-bold text-yellow-600">1,200</p>
+      <p class="text-gray-500 mt-1">Recorded Today</p>
+    </div>
+
+  </section>
+
+  <!-- Detailed Reports Cards -->
+  <main class="flex-1 p-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+    
+    <!-- Daily Reports -->
+    <section class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition transform hover:-translate-y-1">
+      <img src="/assets/download.jpg" alt="Daily Reports" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+      <h2 class="text-xl font-semibold mb-2">Daily Reports</h2>
+      <p class="text-gray-600 text-center mb-4">
+        View all daily stock entries submitted by merchandisers across branches.
+      </p>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Daily Reports</button>
+    </section>
+
+    <!-- Branch-wise Reports -->
+    <section class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition transform hover:-translate-y-1">
+      <img src="/assets/download.jpg" alt="Branch Reports" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+      <h2 class="text-xl font-semibold mb-2">Branch-wise Reports</h2>
+      <p class="text-gray-600 text-center mb-4">
+        Analyze stock levels and entries for individual branches to monitor performance.
+      </p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">View Branch Reports</button>
+    </section>
+
+    <!-- Export Reports -->
+    <section class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition transform hover:-translate-y-1">
+      <img src="/assets/download.jpg" alt="Export Reports" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+      <h2 class="text-xl font-semibold mb-2">Export Reports</h2>
+      <p class="text-gray-600 text-center mb-4">
+        Export reports as CSV files for offline analysis or record-keeping.
+      </p>
+      <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition">Export CSV</button>
+    </section>
+
+    <!-- User Activity Reports -->
+    <section class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition transform hover:-translate-y-1">
+      <img src="/assets/download.jpg" alt="User Activity" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+      <h2 class="text-xl font-semibold mb-2">User Activity</h2>
+      <p class="text-gray-600 text-center mb-4">
+        Track who has submitted or edited stock entries today.
+      </p>
+      <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">View Activity</button>
+    </section>
+
+    <!-- Quick Tips -->
+    <section class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition transform hover:-translate-y-1">
+      <img src="/assets/download.jpg" alt="Quick Tips" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+      <h2 class="text-xl font-semibold mb-2">Quick Tips</h2>
+      <p class="text-gray-600 text-center mb-4">
+        Learn how to make the most of the Stock Take App and ensure accurate reporting.
+      </p>
+      <button class="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">View Tips</button>
+    </section>
+
+  </main>
+
+  <!-- Quick Tips Section -->
+  <aside class="bg-gray-200 p-6 text-center mt-6">
+    <h3 class="text-lg font-semibold mb-2">Quick Tips</h3>
+    <ul class="list-disc pl-6 text-sm space-y-1 text-gray-700">
+      <li>Always verify report data before exporting.</li>
+      <li>Use branch-wise reports to track performance and discrepancies.</li>
+      <li>Keep exported files in a secure folder for reference.</li>
+    </ul>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 text-center p-4 mt-auto">
+    <p>&copy; 2025 VIVEK INVESTMENTS LTD. All Rights Reserved.</p>
+    <p class="text-sm">Stock Take Management System | Secure & Reliable</p>
+  </footer>
+
+</body>
+</html>
